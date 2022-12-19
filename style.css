@@ -1,0 +1,116 @@
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --desat-blue: hsl(229, 23%, 23%);
+    --gray-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+
+    --main-font: 'Kumbh Sans', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 18px;
+    background-color: var(--dark-cyan);
+    font-family: var(--main-font);
+}
+
+main{
+    display: grid;
+    place-content: center;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+
+.bottom-part{
+    background-color: white;
+    position: relative;
+}
+
+
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    margin: 25px;
+    min-width: 225px;
+    z-index: 1;
+}
+
+#profile-img{
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -23%;
+
+}
+
+.profile-stats-container{
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: hsl(0, 0%, 89%);
+    margin-top: 25px;
+}
+
+.bottom-part h1{
+    margin-top: 70px;
+    font-weight: 700;
+    font-size: 1em;
+    color: var(--desat-blue);
+}
+
+.bottom-part h1 span{
+    margin-left: 3px;
+    color: var(--gray-blue);
+    font-weight: 400;
+}
+
+.bottom-part > p{
+    font-size: .8em;
+    margin-top: 7px;
+    color: var(--gray-blue);
+}
+
+.stat > p:first-of-type{
+    font-weight: 700;
+    color: var(--desat-blue);
+}
+
+.stat > p:last-of-type{
+    font-size: .6em;
+    letter-spacing: 1px;
+    color: var(--gray-blue);
+    margin-top: 2px;
+}
+
+.top-corner-bg{
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-29%, -50%);
+}
+
+.bottom-corner-bg{
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(24%, 62%);
+}
